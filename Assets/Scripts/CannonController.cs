@@ -1,33 +1,68 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonController : MonoBehaviour
 {
+    public GameObject cannonPivot;
+    public GameObject firingPoint;
 
-    private bool targetLocked;
-    private 
+    public float rotationSpeed = 5f;
+    public GameObject cannonBallPrefab;
+    public float shootCooldown = 5f;
 
-    // Start is called before the first frame update
-    void Start()
+    private GameObject target;
+    private bool isShooting;
+
+    private void Start()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("enemyBug") && !targetLocked)
+        if (target != null)
         {
-            /*twr.target = col.gameObject.transform;
-            curTarget = col.gameObject;
-            targetLocked = true;*/
+            var direction = target.transform.position - cannonPivot.transform.position;
+            var rotation = Quaternion.LookRotation(direction);
+            cannonPivot.transform.rotation = Quaternion.Slerp(cannonPivot.transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+            if (!isShooting)
+                StartCoroutine(Shoot());
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        Debug.Log($"OnTriggerEnter: {col.name} - {col.tag}");
+
+        if (col.gameObject.CompareTag("Airship"))
+            target = col.gameObject;
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        Debug.Log("OnTriggerExit");
+        Debug.Log($"OnTriggerEnter: {col.name} - {col.tag}");
+
+        if (col.gameObject.CompareTag("Airship"))
+            target = null;
+    }
+
+    private IEnumerator Shoot()
+    {
+        isShooting = true;
+        yield return new WaitForSeconds(shootCooldown);
+
+        if (target != null)
+        {
+            // Creates a cannon ball from prefab on firing point..
+            var cannonBall = Instantiate(cannonBallPrefab, firingPoint.transform.position, Quaternion.identity);
+            cannonBall.GetComponent<CannonBallController>().SetTarget(target.transform);
         }
 
+        isShooting = false;
     }
 }
