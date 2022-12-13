@@ -15,27 +15,27 @@ MonoBehaviour:
   lightingModel: 0
   useFlatLighting: 1
   renderQueueIndex: 0
-  color: {r: 0.54509807, g: 0.77254903, b: 0.6784314, a: 0.5}
+  color: {r: 0.35359558, g: 0.4698611, b: 0.5471698, a: 0.7921569}
   specColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   smoothness: 0.7
   enableLightAbsorption: 1
-  depthColor: {r: 0.44705883, g: 0.7254902, b: 0.65882355, a: 0.85}
+  depthColor: {r: 0.46413317, g: 0.610789, b: 0.6603774, a: 0.85}
   maxDepth: 1.85
   enableFoam: 1
   foamColor: {r: 1, g: 1, b: 1, a: 1}
-  foamDistance: 1
+  foamDistance: 5
   enableFoamHQ: 1
   foamNoiseScaleHQ: 3
-  foamNoiseSpeedHQ: 1
-  shorelineFoamStrength: 1
-  crestFoamStrength: 0.012
-  crestMaxDepth: 10
+  foamNoiseSpeedHQ: 0.5
+  shorelineFoamStrength: 0.25
+  crestFoamStrength: 0
+  crestMaxDepth: 0.01
   slopeFoamStrength: 0.5
   slopeFoamFlowSpeed: 20
   slopeFoamDistance: 50
-  rippleHeight: 0.05
+  rippleHeight: 0.25
   rippleSpeed: 1
-  rippleNoiseScale: 5
+  rippleNoiseScale: 2
   enableWave: 1
   waveDirection: 45
   waveSpeed: 3
