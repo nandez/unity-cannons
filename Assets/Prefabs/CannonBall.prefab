@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3904640055013825008}
   - component: {fileID: 1541205665746883615}
   - component: {fileID: 538415644829833208}
+  - component: {fileID: 5152301634817387684}
+  - component: {fileID: 5048440702138878167}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: Untagged
@@ -96,3 +98,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cd9ce4d5237b64e9c08802a244309b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTime: 15
+  damage: 10
+--- !u!135 &5152301634817387684
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521997433529326295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1525
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.000000014901161}
+--- !u!54 &5048440702138878167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521997433529326295}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

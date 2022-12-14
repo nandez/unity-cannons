@@ -4,39 +4,21 @@ using UnityEngine;
 
 public class CannonBallController : MonoBehaviour
 {
-    public float speed = 5f;
+    [SerializeField] protected float lifeTime;
+    [SerializeField] protected int damage;
 
-    private Transform target;
-
-    void Update()
+    void Start()
     {
-        if(target != null)
-        {
-            transform.LookAt(target);
-            transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
-        }
-        else
-        {
-            // TODO: to see what happens when cannon ball was fired, but target
-            // gets out of tower range..
-        }
+        // Destruimos el objeto una vez cumplido el tiempo de vida.
+        Destroy(gameObject, lifeTime);
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision coll)
     {
-        // Validates the cannon ball hits the desired target..
-        if (col.gameObject.transform == target)
+        if (coll.gameObject.CompareTag("Player"))
         {
-            //TODO: to create some particles
-
-            // Finally destroys the cannon ball..
-            Destroy(gameObject, 0.1f);
-            return;
+            // Destruimos el objeto.
+            Destroy(gameObject);
         }
-    }
-
-    public void SetTarget(Transform target)
-    {
-        this.target = target;
     }
 }
