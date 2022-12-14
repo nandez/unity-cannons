@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Airship
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Water
   - UI
   - NavigableArea
-  - 
+  - Projectile
   - 
   - 
   - 

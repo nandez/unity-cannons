@@ -9,6 +9,11 @@ public class CameraController : MonoBehaviour
     [SerializeField] protected float minHeight = 10f;
     [SerializeField] protected Vector2 mapSize;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     void Update()
     {
         var position = transform.position;
