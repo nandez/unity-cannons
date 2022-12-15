@@ -24,15 +24,15 @@ public class CannonBallController : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            DealDamage(col);
-        }
-        else if (col.gameObject.CompareTag("Water"))
+        if (col.gameObject.CompareTag("Water"))
         {
             // Cuando la bala de cañon impacta con el agua, detenemos el movimiento
             // y dejamos que la gravedad actue sobre el objeto.
             rbComponent.velocity = Vector3.zero;
+        }
+        else
+        {
+            DealDamage(col);
         }
     }
 

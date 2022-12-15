@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1070200021692147792}
   - component: {fileID: 1186007277443056898}
   - component: {fileID: 1170540985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CannonTower
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,6 +700,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: CooldownBar
       objectReference: {fileID: 0}
+    - target: {fileID: 3503488989304560323, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -3.9999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503488989304560323, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503488989304560323, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503488989304560323, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010695201502161039, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -3.999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010695201502161039, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010695201502161039, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010695201502161039, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8467598307920476048, guid: fd5b1bec02f632e4fa99c748652e2235, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -809,6 +841,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6363298258841894933}
     m_Modifications:
+    - target: {fileID: 546661143947198685, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 546661143947198685, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 546661143947198685, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 546661143947198685, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1813170210453399274, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -896,6 +944,26 @@ PrefabInstance:
     - target: {fileID: 3882206786431707555, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796878078819957782, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796878078819957782, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796878078819957782, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796878078819957782, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796878078819957782, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05b392516bd4e854d82f77c3ce10f680, type: 3}

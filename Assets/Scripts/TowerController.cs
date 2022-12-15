@@ -21,11 +21,11 @@ public class TowerController : MonoBehaviour
     [SerializeField] protected bool drawAttackRangeGizmo = true;
 
 
-    protected AirshipController player;
+    protected PlayerController player;
 
     void Start()
     {
-        player = FindObjectOfType<AirshipController>();
+        player = FindObjectOfType<PlayerController>();
 
         // Inicializamos las referencias a los componentes que controla los puntos de vida
         // y asignamos los handlers para los eventos.
