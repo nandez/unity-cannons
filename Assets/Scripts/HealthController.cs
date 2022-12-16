@@ -44,8 +44,7 @@ public class HealthController : MonoBehaviour
         {
             OnDeath?.Invoke();
 
-            // Verificamos si debemos destruir el objeto al morir, o si se contempla
-            // en otro script.
+            // Verificamos si debemos destruir el objeto al morir, o si se contempla en otro script.
             if (destroyOnDeath)
                 Destroy(gameObject);
         }

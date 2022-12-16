@@ -15,7 +15,7 @@ public class TowerController : MonoBehaviour
     [SerializeField] protected CannonController cannonCtrl;
 
     [Header("Events")]
-    public UnityAction<TowerController> OnTowerDestroyed;
+    public UnityAction OnTowerDestroyed;
 
     [Header("Misc")]
     [SerializeField] protected bool drawAttackRangeGizmo = true;
@@ -43,13 +43,11 @@ public class TowerController : MonoBehaviour
 
     protected virtual void OnEnemyDeathHandler()
     {
-        // Cuando el enemigo muere, invocamos el evento OnEnemyDestroyed indicando
-        // los puntos de recompensa como parámetro.
-        OnTowerDestroyed?.Invoke(this);
+        // Cuando el enemigo muere, invocamos el evento OnTowerDestroyed para notificar a los listeners.
+        OnTowerDestroyed?.Invoke();
 
-        // TODO: animación de "hundimiento" (transform.Translate(Vector3.down * Time.deltaTime * 2f)
-        // sonido de explosión??
-        Destroy(gameObject);
+        // TODO: particulas de destrucción?
+        Destroy(gameObject, 0.5f);
     }
 
     protected virtual void OnEnemyHealthUpdatedHandler(int currentHitPoints, int maxHitPoints)
