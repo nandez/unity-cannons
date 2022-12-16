@@ -161,7 +161,7 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 0
-  showTrajectory: 1
+  showTrajectory: 0
   archLineCount: 50
   archCalcInterval: 0.25
   cannonFirePoint: {fileID: 6080001841179480757}

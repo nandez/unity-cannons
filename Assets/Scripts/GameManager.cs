@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 
         // Seteamos el estado del juego
         State = GameState.Running;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Application.Quit()
+        Application.Quit();
 #endif
     }
 
