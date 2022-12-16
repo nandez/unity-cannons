@@ -87,12 +87,14 @@ public class GameManager : MonoBehaviour
     private void OnPlayerDeath()
     {
         State = GameState.GameOver;
+        Time.timeScale = 0;
         OnGameOver?.Invoke();
     }
 
     private void OnQuestCompleted()
     {
         State = GameState.GameOver;
+        Time.timeScale = 0;
         OnLevelCompleted?.Invoke();
     }
 

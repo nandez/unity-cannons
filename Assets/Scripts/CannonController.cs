@@ -5,6 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LineRenderer))]
 public class CannonController : MonoBehaviour
 {
+
     public LayerMask ignoreLayer;
 
     [Header("Trajectory Settings")]
@@ -19,6 +20,8 @@ public class CannonController : MonoBehaviour
     [SerializeField] protected Transform cannonPivot;
     [Range(0, 90)][SerializeField] protected float fireAngle = 35f; // Indica el ángulo de disparo
     [SerializeField] protected float rotationSpeed = 5f; // Indica la velocidad de rotación del cañon.
+    [SerializeField] protected AudioSource cannonFireSound;
+    [SerializeField] protected ParticleSystem cannonFireEffect;
 
 
     [Header("CoolDown Settings")]
@@ -80,6 +83,10 @@ public class CannonController : MonoBehaviour
             // Le aplicamos una fuerza de impulso al proyectil.
             var projectileRb = projectile.GetComponent<Rigidbody>();
             projectileRb.AddForce(fireDirection * projectileRb.mass, ForceMode.Impulse);
+
+            // Ejecutamos el sonido de disparo y el efecto de humo.
+            cannonFireSound?.Play();
+            cannonFireEffect?.Play();
 
             // Si tenemos habilitada la visualización de la trayectoria, limpiamos la trayectoria con delay..
             if (showTrajectory)
